@@ -17,16 +17,3 @@ exports.AppDataSource = new typeorm_1.DataSource({
     logging: true,
     synchronize: true, //! Puedo observar todo el codigo que se genera
 });
-// export const AppDataSource = new DataSource({
-//     type: "postgres",
-//     host: DB_HOST,
-//     port: parseInt(DB_PORT + ""),
-//     username: DB_USER,
-//     password: DB_PASSWORD,
-//     database: DB_DATABASE,
-//     entities: [ User, Influencer,Services ],
-//     logging: true,
-//     synchronize: true, //! Puedo observar todo el codigo que se genera
-// })
-//! Para desarrollo la entities es buena, pero para PRODUCCION
-//! Se recomienda migrations
