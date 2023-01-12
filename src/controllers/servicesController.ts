@@ -29,6 +29,7 @@ export const getServices = async (req: Request, res: Response) => {
 
 export const createServices = async ( req: Request, res: Response) => {
     try {
+        console.log("ENTRANDO");
         const { nombre, edad,description,precio,img,habilitado } = req.body; 
         const services = new Services(); //! Estoy creando un nuevo usuario
         services.nombre = nombre;
@@ -39,6 +40,7 @@ export const createServices = async ( req: Request, res: Response) => {
         return res.json({listServices: allServices});
         // return res.json(services); //! Retorno el usuario
     } catch (error) {
+      console.log(error);
         if (error instanceof Error) {
             return res.status(500).json({ message: error.message });
           }

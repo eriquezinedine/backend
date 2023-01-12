@@ -40,6 +40,7 @@ const getServices = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
 exports.getServices = getServices;
 const createServices = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        console.log("ENTRANDO");
         const { nombre, edad, description, precio, img, habilitado } = req.body;
         const services = new Services_1.Services(); //! Estoy creando un nuevo usuario
         services.nombre = nombre;
@@ -50,6 +51,7 @@ const createServices = (req, res) => __awaiter(void 0, void 0, void 0, function*
         // return res.json(services); //! Retorno el usuario
     }
     catch (error) {
+        console.log(error);
         if (error instanceof Error) {
             return res.status(500).json({ message: error.message });
         }
