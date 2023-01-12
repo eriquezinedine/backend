@@ -24,7 +24,7 @@ export const AppDataSource = new DataSource({
     username: DB_USER,
     password: DB_PASSWORD,
     database: DB_DATABASE,
-    entities: [ User, Influencer,Services ],
+    // entities: [ User, Influencer,Services ],
     logging: true,
     synchronize: true, //! Puedo observar todo el codigo que se genera
 })
